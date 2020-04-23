@@ -37,6 +37,8 @@ function get_example_inputs(): ImmVector<(HttpMethod, string)> {
 
 <<__EntryPoint>>
 function main(): noreturn {
+	\Facebook\AutoloadMap\initialize();
+	
 	$router = new RouterTest();
 	foreach (get_example_inputs() as $input) {
 		list($method, $path) = $input;
